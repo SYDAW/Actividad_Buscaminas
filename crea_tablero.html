@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear Tablero de Buscaminas</title>
+</head>
+<body>
+    <h1>Crear Tablero de Buscaminas</h1>
+    
+    <form method="post" action="{% url 'crea_tablero' %}?fila={{ form.filas.value }}&columna={{ form.columnas.value }}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Crear Tablero">
+    </form>
+    
+    {% if filas and columnas %}
+        <h2>Tablero Creado</h2>
+        <p>Se ha creado un tablero de {{ filas }} filas y {{ columnas }} columnas.</p>
+    {% endif %}
+</body>
+</html>
