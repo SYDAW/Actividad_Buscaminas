@@ -1,8 +1,8 @@
 from django.urls import path
 
-from ActBM import views
+from blog import views
 
 urlpatterns = [
     path('', views.welcome, name='welcome'),
-    path('crearTablero/', views.creartablero, name='crearTablero'),
+    path('crearTablero/', views.crearTablero, name='crearTablero'),
 ]
