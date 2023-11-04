@@ -3,6 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Tablero Buscaminas</title>
+    <style>
+    table {
+        margin-top: 10px;
+        border-collapse: collapse;
+    }
+    tr,td {
+        border: 2px solid;
+        width: 50px;
+        height: 50px;
+    }
+</style>
 </head>
 <body>
     Filas: {{ filas }}<br>
@@ -16,16 +27,5 @@
         </tr>
     {% endfor %}
 </table>
-<style>
-    table {
-        margin-top: 10px;
-        border-collapse: collapse;
-    }
-    tr,td {
-        border: 2px solid;
-        width: 50px;
-        height: 50px;
-    }
-</style>
 </body>
 </html>
