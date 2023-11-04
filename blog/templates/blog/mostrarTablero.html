@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tablero Buscaminas</title>
+</head>
+<body>
+    Filas: {{ filas }}<br>
+    Columnas: {{ columnas }}<br/>
+<table>
+    {% for filas in rango_filas %}
+        <tr>
+            {% for columna in rango_columnas %}
+                <td></td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+<style>
+    table {
+        margin-top: 10px;
+        border-collapse: collapse;
+    }
+    tr,td {
+        border: 2px solid;
+        width: 50px;
+        height: 50px;
+    }
+</style>
+</body>
+</html>
